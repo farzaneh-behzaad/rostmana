@@ -1,4 +1,4 @@
-package pro.vteam.restmana.activity;
+package com.rostmana.app.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import pro.vteam.restmana.R;
+import com.rostmana.app.R;
 
 public class CategoriesActivity extends AppCompatActivity {
 

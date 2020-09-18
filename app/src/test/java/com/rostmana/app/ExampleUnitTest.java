@@ -1,4 +1,4 @@
-package pro.vteam.restmana;
+package com.rostmana.app;
 
 import org.junit.Test;
 

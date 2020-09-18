@@ -1,4 +1,4 @@
-package pro.vteam.restmana.activity;
+package com.rostmana.app.activity;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -23,7 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import pro.vteam.restmana.R;
+import com.rostmana.app.R;
 
 public class MainActivity extends AppCompatActivity {
 
