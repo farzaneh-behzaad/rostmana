@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="categories_activity_toolbar_text_size">22sp</dimen>
+    <dimen name="grid_layout_cell_padding">18dp</dimen>
+    <dimen name="grid_layout_top_padding">32dp</dimen>
+    <dimen name="grid_layout_bottom_padding">48dp</dimen>
+    <dimen name="grid_layout_corner_radius">4dp</dimen>
+    <dimen name="grid_layout_start_padding">16dp</dimen>
+    <dimen name="dialog_padding">18dp</dimen>
+    <dimen name="dialog_rounded_radius">8dp</dimen>
+    <dimen name="bottom_app_bar_icon_size">24dp</dimen>
+    <dimen name="bottom_app_bar_icon_margin">16dp</dimen>
+</resources>

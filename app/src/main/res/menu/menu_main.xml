@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_gender"
+        android:checkable="true"
+        android:icon="@drawable/ic_wc_black_24dp"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="gender" />
+
+
+</menu>

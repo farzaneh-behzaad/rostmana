@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenColor"
+    tools:context=".activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/screenColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/img_hanger"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:tooltipText="hanger"
+                app:srcCompat="@drawable/ic_hanger" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@id/bottom_app_bar"
+        android:layout_gravity="top"
+        android:id="@+id/linear_layout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/separator" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/top_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_icon_size"
+                android:layout_margin="@dimen/bottom_app_bar_icon_margin"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/ic_curved_arrow_pointing_left" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/paint"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_icon_size"
+                android:layout_margin="@dimen/bottom_app_bar_icon_margin"
+                android:layout_weight="0.5"
+                app:layout_constraintStart_toEndOf="@id/back"
+                app:srcCompat="@drawable/ic_xmlid_476_" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/square"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_icon_size"
+                android:layout_margin="@dimen/bottom_app_bar_icon_margin"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/ic_crop_button" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/plus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_app_bar_icon_size"
+                android:layout_margin="@dimen/bottom_app_bar_icon_margin"
+                android:layout_weight="0.5"
+                app:srcCompat="@drawable/ic_group_364"
+
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:background="@color/separator" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        app:fabCradleMargin="0dp"
+        app:fabCradleRoundedCornerRadius="0dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabAlignmentMode="center">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_contact" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_file" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white_color"
+        android:scaleType="fitXY"
+        app:backgroundTint="@color/separator"
+        app:borderWidth="4dp"
+        app:fabCustomSize="80dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:layout_anchorGravity="center"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_image" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Rest Mana</string>
+    <string name="select_category">انتخاب دسته بندی</string>
+    <string name="select_gender">لطفا جنسیت را انتخاب نمایید</string>
+
+</resources>
