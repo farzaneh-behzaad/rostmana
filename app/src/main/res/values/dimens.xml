@@ -10,4 +10,6 @@
     <dimen name="dialog_rounded_radius">8dp</dimen>
     <dimen name="bottom_app_bar_icon_size">24dp</dimen>
     <dimen name="bottom_app_bar_icon_margin">16dp</dimen>
+    <dimen name="top_navigation_height">64dp</dimen>
+    <dimen name="top_navigation_padding">18dp</dimen>
 </resources>

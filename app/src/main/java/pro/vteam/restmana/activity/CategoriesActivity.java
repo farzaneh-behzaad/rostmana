@@ -1,11 +1,15 @@
 package pro.vteam.restmana.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import pro.vteam.restmana.R;
 
@@ -27,9 +31,26 @@ public class CategoriesActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(drawable);
     }
 
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    public void categoryItemClicked(View view) {
+
+        if (view.getTag() == null) {
+            view.setTag(true);
+            view.setBackgroundResource(R.drawable.grid_layout_solid_rounded_corner);
+            ((AppCompatImageView) view).setColorFilter((getResources().getColor(R.color.white_color)));
+
+        } else {
+            view.setTag(null);
+            view.setBackgroundResource(R.drawable.grid_layout_rounded_corner);
+            ((AppCompatImageView) view).setColorFilter((getResources().getColor(R.color.screenColor)));
+        }
+
+
     }
 }

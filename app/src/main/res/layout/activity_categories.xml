@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.CategoriesActivity">
-
-
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,8 +27,8 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:text="@string/select_category"
-                android:textSize="@dimen/categories_activity_toolbar_text_size"
                 android:textColor="@color/categories_toolbar_text_color"
+                android:textSize="@dimen/categories_activity_toolbar_text_size"
                 android:textStyle="bold" />
 
 
@@ -43,132 +40,141 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/appbar_categories"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="@dimen/grid_layout_top_padding"
-        android:layout_marginBottom="@dimen/grid_layout_bottom_padding"
         android:layout_marginStart="@dimen/grid_layout_start_padding"
+        android:layout_marginTop="@dimen/grid_layout_top_padding"
         android:layout_marginEnd="@dimen/grid_layout_start_padding"
-        >
+        android:layout_marginBottom="@dimen/grid_layout_bottom_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_categories">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:columnCount="2"
-        app:rowCount="5"
-        app:useDefaultMargins="true">
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView5"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-           app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_t_shirt"
-            android:tint="#FFF"
-            android:background="@drawable/grid_layout_solid_rounded_corner"
-            android:padding="@dimen/grid_layout_cell_padding"
-
-           />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_shirt_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"
-            />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView6"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_waistcoat"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView7"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_coat_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView8"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_hood_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_solid_rounded_corner"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView9"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_jacket_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView10"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_accessory_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnCount="2"
+            app:rowCount="5"
+            app:useDefaultMargins="true">
 
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_pants_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_solid_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                android:tag="true"
+                android:tint="#FFF"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_t_shirt"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_shirt_01" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_waistcoat" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_coat_01" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_solid_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                android:tag="true"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_hood_01" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_jacket_01" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_accessory_01" />
 
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_pants_01" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_socks_01"
-            android:padding="@dimen/grid_layout_cell_padding"
-            android:background="@drawable/grid_layout_rounded_corner"/>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView13"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_rowWeight="1"
-            app:layout_columnWeight="1"
-            app:srcCompat="@drawable/ic_shoe_01"
-            android:padding="32dp"
-            android:background="@drawable/grid_layout_rounded_corner"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="@dimen/grid_layout_cell_padding"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_socks_01" />
 
-    </androidx.gridlayout.widget.GridLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/grid_layout_rounded_corner"
+                android:onClick="categoryItemClicked"
+                android:padding="32dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:srcCompat="@drawable/ic_shoe_01" />
+
+        </androidx.gridlayout.widget.GridLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
